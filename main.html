@@ -2,6 +2,10 @@
 <html>
 <head>
 <title>Page Title</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/bubblesort.js"></script>
 <script type="text/javascript" src="js/insertionsort.js"></script>
 <script type="text/javascript" src="js/quicksort.js"></script>
@@ -9,11 +13,40 @@
 <body>
 
 
-    <button onclick="btnBS()">Bubble Sort</button>
-    <button onclick="btnIS()">Insertion Sort</button>
-    <button onclick="btnQS()">Quick Sort</button>
+    <div class="container">
+        <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 m-2 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" onclick="reset()">Reset</button> 
+                    <button type="button" class="btn btn-primary" onclick="reset()">Ascending</button> 
+                    <button type="button" class="btn btn-primary" onclick="reset()">Desending</button> 
+                </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+              <div class="row m-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-info" onclick="btnBS()">Bubble Sort</button> </div>
+            <div class="row m-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-info" onclick="btnIS()">Insertion Sort</button> 
+            </div>
+            <div class="row m-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-info" onclick="btnQS()">Quick Sort</button>
+            </div>
+          </div>
+          <div class="col-sm">
+              
+            
+                <canvas id="myCanvas" width="100" height="100" style="border:1px solid #d3d3d3; zoom:4;">
+          
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+        </div>
+      </div>
+    
     <div id ="my"></div>
-    <canvas id="myCanvas" width="100" height="100" style="border:1px solid #d3d3d3; zoom:4;">
+    
 
         
         <script type="text/javascript" src="js/main.js"></script>
