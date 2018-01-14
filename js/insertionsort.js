@@ -35,11 +35,19 @@ function insertionsort(/*imgData,ctx,*/width, heightArr, idx){
 
 
 }
+var stopItervalsLength = 0;
 function stopIntervalIS(idx){
-    console.log("stop");
+    //console.log("stop");
+    stopItervalsLength++;
     clearInterval(intervals[idx]);
+    if(stopItervalsLength == intervals.length-1){
+        
+        enableForm();
+    }
 }
 function startIS(/*imgData,ctx,*/width){
+    diableForm();
+    stopItervalsLength = 0;
     var total = imgData.data.length/4;
     var height = total/width;
     console.log(height);

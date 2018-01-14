@@ -45,7 +45,7 @@ function quickSort(arr, left, right, base, iteration, width){
         partitionIndex = left;
  
     for(var i = left; i < right; i+=4){
-     if(getVal(arr,i) < pivotValue){
+     if(getVal(arr,i) > pivotValue){
        swap(arr, i, partitionIndex);
        partitionIndex+=4;
      }
@@ -71,6 +71,8 @@ function btnQS(){
 }
 
 function startQS(/*imgData,ctx,*/width){
+    diableForm();
+   
     var total = imgData.data.length/4;
     var height = total/width;
     console.log(height);
@@ -138,5 +140,6 @@ function updateCanvas(){
     qsI++;
     if(qsI >= frames.length){
         clearInterval(qsInterval);
+        enableForm();
     }
 }

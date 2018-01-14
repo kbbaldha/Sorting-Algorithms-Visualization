@@ -33,8 +33,14 @@ function bubblesort(/*imgData,ctx,*/width, heightArr, idx){
 function stopInterval(idx){
     console.log("stop");
     clearInterval(intervals[idx]);
+    if(idx == intervals.length-1){
+        
+        enableForm();
+    }
 }
 function startBS(/*imgData,ctx,*/width){
+    diableForm();
+    
     var total = imgData.data.length/4;
     var height = total/width;
     console.log(height);

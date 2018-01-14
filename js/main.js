@@ -79,6 +79,13 @@ function reset(shuffleNotReqd,isAscending){
     ctx.putImageData(imgData, 0, 0);
 }
 
+function diableForm(){
+    document.getElementById("wholeform").disabled = true; 
+}
+function enableForm(){
+    document.getElementById("wholeform").disabled = false; 
+}
+
 var colors = [[255,0,0,255],[0,255,0,255],[0,0,255,255],[255,255,0,255],[0,255,255,255],[255,100,255,255],
 [100,200,200,255],[135,44,36,255],[44,55,66,255],[200,235,222,255],[122,33,49,255],[255,220,222,255]];
 var $tmparr = [];
@@ -90,4 +97,6 @@ for(var i=0;i<w;i++){
 
 
 
+
 reset();
+
